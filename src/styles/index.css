@@ -648,6 +648,8 @@ body {
   .sidebar{
     width: 50px;
     height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .shrink{
     width: 30px !important;
@@ -664,17 +666,17 @@ body {
   }
  
   .backdrop{
-    width: 97%;
-    height: 19%;
+    width: 98%;
+    height: 22%;
     margin: 0 !important;
   }
   .play{
-    height: 60px !important;
-    width: 60px;
+    height: 100px !important;
+    width: 40px;
   }
   .play-button{
-    width: 30px !important;
-    height: 30px;
+    width: 20px !important;
+    height: 20px;
   }
   .watch-trailer{
     width: fit-content;
@@ -706,9 +708,11 @@ body {
     justify-content: space-between !important;
   }
   .tags{
+    width: fit-content;
   }
   .tag{
     margin-bottom: 5px;
+    margin-right: 2px;
   }
   .overview{
     font-size: 14px;
@@ -718,5 +722,8 @@ body {
   }
   .rate{
     justify-content: center;
+  }
+  .last-picture{
+    display: none;
   }
 }

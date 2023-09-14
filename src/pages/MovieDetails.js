@@ -44,6 +44,8 @@ const MovieDetails = () => {
   return (
     <div className="movie-details">
       <Sidebar />
+      &thinsp; 
+      &thinsp; 
       {error ? (
         <div className="error-message">Movie not found!</div>
       ) : (
