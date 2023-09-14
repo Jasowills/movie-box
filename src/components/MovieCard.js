@@ -1,13 +1,14 @@
+// MovieCard.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Imdb from './Imdb';
 import TomatoLogo from './Tomato';
 
 const MovieCard = ({ movie }) => {
-  // Calculate the percentage based on vote count
-  const percentage = (movie.vote_count / 100).toFixed(1); // Adjust decimal places as needed
+  const percentage = (movie.vote_count / 100).toFixed(1);
 
   return (
-    <div className="movie-card" data-testid="movie-card">
+    <Link to={`/movies/${movie.id}`} className="movie-card link" data-testid="movie-card">
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
@@ -28,7 +29,7 @@ const MovieCard = ({ movie }) => {
       <p className="movie-release-date" data-testid="movie-release-date">
         Release Date: {movie.release_date}
       </p>
-    </div>
+    </Link>
   );
 };
 

@@ -1,11 +1,16 @@
-import React from "react";
-import "./styles/index.css"
-import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Use Routes
+
+import Home from './pages/Home';
+import MovieDetails from './pages/MovieDetails';
+
 function App() {
   return (
-    <div className="App">
-    <Home/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Use the element prop */}
+        <Route path="/movies/:id" element={<MovieDetails />} /> {/* Use the element prop */}
+      </Routes>
+    </Router>
   );
 }
 
